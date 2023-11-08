@@ -1,6 +1,6 @@
 # Modify the Application Reconciliation Timeout in Argo CD
 
-## By changing the confi map argocd-cm
+## By changing the config map argocd-cm
 
 ```
 kubectl describe configmaps argocd-cm -n argocd
