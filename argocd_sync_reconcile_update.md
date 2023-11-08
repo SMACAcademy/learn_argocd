@@ -33,3 +33,7 @@ Minikube to be restarted. If argocd running in minikube
 
 
 ```
+
+kubectl set env -n argocd deployment/argocd-repo-server ARGOCD_RECONCILIATION_TIMEOUT=5s
+
+kubectl describe -n argocd deployment/argocd-repo-server
