@@ -101,8 +101,6 @@ Setting up high availability for ArgoCD involves deploying it in a Kubernetes cl
    or
 
    kubectl get all -n argocd
-
-
    ```
 
 5. Access the ArgoCD UI
