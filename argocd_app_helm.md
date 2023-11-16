@@ -1,25 +1,25 @@
-#### Introduction
+## Introduction
 
 - Explanation of ArgoCD and its benefits for Kubernetes deployment.
 - Introduction to Helm and how it simplifies package management in Kubernetes.
 
-#### Prerequisites
+## Prerequisites
 
 - Kubernetes cluster (e.g., Minikube, EKS, GKE, AKS).
 - Installed ArgoCD in the Kubernetes cluster.
 - Helm installed locally or in a CI/CD environment.
 
-#### Part 1: Setting up Helm in Your Local Environment
+## Part 1: Setting up Helm in Your Local Environment
 
 - Step-by-step instructions for installing Helm.
 - Creating a new Helm chart or using an existing one.
 
-#### Part 2: Understanding Helm Charts
+## Part 2: Understanding Helm Charts
 
 - Structure of a Helm chart.
 - Explanation of Chart.yaml, values.yaml, templates, and other components.
 
-#### Part 3: Creating a Simple Helm Chart
+## Part 3: Creating a Simple Helm Chart
 
 - Command: `helm create my-application`
 - Sample files:
@@ -28,7 +28,7 @@
    - Deployment.yaml
    - Service.yaml
 
-#### Directory Structure
+### Directory Structure
 ```markdown
 my-webapp/
   Chart.yaml
@@ -179,17 +179,17 @@ Replace `https://charts.bitnami.com/bitnami` with the URL of your chart reposito
 You can now apply this manifest to your ArgoCD instance with `kubectl apply -f application.yaml`, and ArgoCD will manage the lifecycle of your web application in Kubernetes using Helm.
 
 
-#### Part 4: Packaging the Helm Chart
+### Part 4: Packaging the Helm Chart
 
 - Command: `helm package my-application`
 
-#### Part 5: Deploying Helm Chart with ArgoCD
+### Part 5: Deploying Helm Chart with ArgoCD
 
 - Creating a repository in ArgoCD for Helm charts.
 - Command to create an ArgoCD application:
    - `argocd app create my-helm-app --repo [REPO_URL] --path [CHART_PATH] --dest-server [K8S_CLUSTER_URL] --dest-namespace [NAMESPACE]`
 
-#### Part 6: Sample ArgoCD Application Manifest for Helm
+### Part 6: Sample ArgoCD Application Manifest for Helm
 
 - Sample `Application.yaml` file that uses Helm:```yaml
 Copy code
