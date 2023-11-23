@@ -24,7 +24,7 @@ argocd logout 192.168.49.2:30443
 
 argocd repo list
 
-argocd login 192.168.49.2:30443 --insecure --username admin --password XYUJoHIpByiJk2nT
+argocd login 192.168.49.2:30443 --insecure --username admin --password cXrvHbCS2O5AeoDG
 
 argocd proj list
 

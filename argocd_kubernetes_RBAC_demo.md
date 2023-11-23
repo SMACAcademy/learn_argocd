@@ -71,25 +71,12 @@ To confirm that RBAC is working as expected, you can perform tests to ensure tha
 For the positive test case, you want to verify that the `example-service-account` can indeed get, list, and watch pods in the `default` namespace as allowed by the `pod-reader` role.
 
 
-- Switch to the `example-service-account` context:
-
-```sh
-kubectl config get-contexts
-
-kubectl config set-context --current --user=example-service-account
-
-kubectl config get-contexts
-
-
-
-
-```
-
-
 - Try to get the list of pods:
 
 ```sh
 kubectl get pods
+
+kubectl get pods --as=system:serviceaccount:default:example-service-account
 
 ```
 This command should succeed, showing you the list of pods in the `default` namespace.
